@@ -1,5 +1,4 @@
 import React from 'react';
-
 // Config
 import { POSTER_SIZE, BACKDROP_SIZE, IMAGE_BASE_URL } from '../config';  
 // Components
@@ -9,14 +8,13 @@ import Thumb from './Thumb';
 import Spinner from './Spinner';
 import SearchBar from './SearchBar';
 import Button from './Button';
-
 // Hook 
 import { useHomeFetch } from '../hooks/useHomeFetch';
 // Image 
 import NoImage from '../images/no_image.jpg';
 
 
-const Home = () => {
+const Home: React.FC = () => {
     const { state, loading, error, searchTerm, setSearchTerm, setIsLoadingMore } = useHomeFetch();
     
     console.log(state);
